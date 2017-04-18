@@ -1,0 +1,16 @@
+
+<!-- Details and layout for the artists bio page -->
+
+<section class="artistinfo">
+  <div class="artist cf" ng-model="artists">
+    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a> <!-- Buttons to move forward and back through the app info -->
+    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
+    <h1>{{artists[whichItem].name}}</h1> <!-- Retrieves the particular artists name referenced in the array contained in the json file-->
+    <div class="info">
+      <h3>{{artists[whichItem].reknown}}</h3> <!-- Retrieves the particular artists reknown info referenced in the array of artists -->
+      <img ng-src="images/{{artists[whichItem].shortname}}_tn.jpg" alt="Photo of {{artists[whichItem].name}}">
+      <div class="bio">{{artists[whichItem].bio}}</div> <!-- Retrieved artists bio information -->
+    </div>
+  </div>
+  <a href="index.html">&laquo; Back to search</a>
+</section>
